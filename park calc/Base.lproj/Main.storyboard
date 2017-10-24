@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSans.ttc">
+            <string>GillSans</string>
+            <string>GillSans-Bold</string>
+            <string>GillSans-Italic</string>
+        </array>
+        <array key="MarkerFeltThin.ttf">
+            <string>MarkerFelt-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--future moni-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="park_calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="neD-5r-tAe">
+                                <rect key="frame" x="16" y="40" width="343" height="558"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="h7o-cS-Bpt">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="59"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="future moni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M64-G3-D8P">
+                                                <rect key="frame" x="128.5" y="0.0" width="86" height="21"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 11,616.17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-wy-DzD">
+                                                <rect key="frame" x="94" y="24" width="155" height="35"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pec-uo-6pJ">
+                                        <rect key="frame" x="0.0" y="78" width="343" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="investment type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S20-Vh-jSk">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-cS-Kyp">
+                                                <rect key="frame" x="0.0" y="24" width="343" height="29"/>
+                                                <segments>
+                                                    <segment title="lumpsum"/>
+                                                    <segment title="installments"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="ComputeType:" destination="9pv-A4-QxB" eventType="valueChanged" id="EE0-Vr-bgK"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="DdX-eH-lXs">
+                                        <rect key="frame" x="0.0" y="149" width="343" height="61"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VPa-my-npT">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="investment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-VY-mb4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10,000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhV-6A-8MV">
+                                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E7z-TS-dO0">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="30"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10000" minValue="100" maxValue="1000000" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-Be-YsF">
+                                                        <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
+                                                        <connections>
+                                                            <action selector="currentInvestment:" destination="9pv-A4-QxB" eventType="valueChanged" id="xUq-Rd-XpH"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="WQg-96-8Dq">
+                                        <rect key="frame" x="0.0" y="229" width="343" height="61"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xgG-ii-7CU">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="interest rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chh-PR-75b">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="990-gY-1jM">
+                                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u8h-Xd-1Dx">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="30"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="DB2-Fc-uVa">
+                                                        <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
+                                                        <connections>
+                                                            <action selector="interestRate:" destination="9pv-A4-QxB" eventType="valueChanged" id="Cxj-v9-MCj"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="y2H-gJ-kpm">
+                                        <rect key="frame" x="0.0" y="308.5" width="343" height="61"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dQi-fR-eR2">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="term in years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-Jq-daH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCV-hs-bbO">
+                                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kdj-Tk-kBY">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="30"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="dZY-ae-dgh">
+                                                        <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
+                                                        <connections>
+                                                            <action selector="timeinYears:" destination="9pv-A4-QxB" eventType="valueChanged" id="gB3-cV-e5n"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="eod-D4-jvW">
+                                        <rect key="frame" x="0.0" y="388.5" width="343" height="59"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="compounding frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-1e-gtL">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.99852846746575341" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nKD-s1-ukO">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="29"/>
+                                                <segments>
+                                                    <segment title="Monthly"/>
+                                                    <segment title="Half Yearly"/>
+                                                    <segment title="Yearly"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="compoundingFrequency:" destination="9pv-A4-QxB" eventType="valueChanged" id="wSH-dp-FYK"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mmf-xO-6pX">
+                                        <rect key="frame" x="0.0" y="466.5" width="343" height="91.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zaw-D2-x4R">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="91.5"/>
+                                                <string key="text">The following recipes show how you can use stack views to create layouts of increasing complexity. Stack views are a powerful tool for quickly and easily designing your user interfaces. Their attributes allow a high degree of control over how</string>
+                                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="neD-5r-tAe" secondAttribute="bottom" constant="20" id="01p-XN-c8B"/>
+                            <constraint firstItem="neD-5r-tAe" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="20" id="07y-Dw-hGj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="neD-5r-tAe" secondAttribute="trailing" id="Q4P-hK-wQS"/>
+                            <constraint firstItem="neD-5r-tAe" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="lki-T1-OWP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="future moni" image="future" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="CapitalLblCaption" destination="Xch-VY-mb4" id="Rsq-I7-uRi"/>
+                        <outlet property="DisplayComputedValue" destination="FZv-wy-DzD" id="j1d-kb-oxa"/>
+                        <outlet property="DisplayLblCaption" destination="M64-G3-D8P" id="HAw-Kh-VOi"/>
+                        <outlet property="DisplayResults" destination="Zaw-D2-x4R" id="vzb-fv-ANi"/>
+                        <outlet property="currentInvestmentLbl" destination="lhV-6A-8MV" id="kWF-nv-yzp"/>
+                        <outlet property="interestRateLbl" destination="990-gY-1jM" id="lmw-Uy-lGt"/>
+                        <outlet property="slideMoney" destination="RbP-Be-YsF" id="V4s-gR-AMf"/>
+                        <outlet property="timeinYearsLbl" destination="jCV-hs-bbO" id="Yyq-rH-u84"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2895.1999999999998" y="-635.46798029556658"/>
+        </scene>
+        <!--current moni-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="park_calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FMw-AG-rHc">
+                                <rect key="frame" x="16" y="40" width="343" height="558"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="91O-0I-53H">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="59"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current moni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xk-An-5H5">
+                                                <rect key="frame" x="123.5" y="0.0" width="96" height="21"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 11,616.17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vqw-lE-n6s">
+                                                <rect key="frame" x="94" y="24" width="155" height="35"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jvp-ab-pQi">
+                                        <rect key="frame" x="0.0" y="79" width="343" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="investment type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcn-G1-bDF">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-Yn-eAN">
+                                                <rect key="frame" x="0.0" y="24" width="343" height="29"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <segments>
+                                                    <segment title="lumpsum"/>
+                                                    <segment title="installments"/>
+                                                </segments>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="ComputeType:" destination="9pv-A4-QxB" eventType="valueChanged" id="6h3-ZT-P4D"/>
+                                                    <action selector="computeType:" destination="8rJ-Kc-sve" eventType="valueChanged" id="niC-fP-zxI"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-lE-Q05">
+                                        <rect key="frame" x="0.0" y="151" width="343" height="61"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HJA-45-oda">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="future moni" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-aU-6ga">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL9-ON-ndd">
+                                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XlC-at-xf7">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="30"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10000" minValue="5000" maxValue="10000000" translatesAutoresizingMaskIntoConstraints="NO" id="Txm-8B-z5i">
+                                                        <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
+                                                        <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="0.58288741440000003" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="currentInvestment:" destination="9pv-A4-QxB" eventType="valueChanged" id="1bF-Qi-gRY"/>
+                                                            <action selector="currentInvestment:" destination="8rJ-Kc-sve" eventType="valueChanged" id="c3C-Gh-OE4"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="M2z-GX-FFZ">
+                                        <rect key="frame" x="0.0" y="232.5" width="343" height="61"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fuk-sc-W9E">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="interest rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP8-o0-JeT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="3.0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQ2-U1-ZM6">
+                                                        <rect key="frame" x="100.5" y="0.0" width="242.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y63-Kj-BL0">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="30"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="wDZ-kv-ycw">
+                                                        <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
+                                                        <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="0.58288741438356162" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="interestRate:" destination="8rJ-Kc-sve" eventType="valueChanged" id="CII-XG-NyJ"/>
+                                                            <action selector="interestRate:" destination="9pv-A4-QxB" eventType="valueChanged" id="tJR-Ac-aDO"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="MM9-k6-AXc">
+                                        <rect key="frame" x="0.0" y="313.5" width="343" height="61"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f9t-0W-Qow">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="term in years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9N-3j-Lt5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sot-CJ-9Kl">
+                                                        <rect key="frame" x="106.5" y="0.0" width="236.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ia4-i3-q96">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="30"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="MrV-yV-ZpU">
+                                                        <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
+                                                        <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="0.58328874143835618" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="timeinYears:" destination="8rJ-Kc-sve" eventType="valueChanged" id="P9t-GG-CXA"/>
+                                                            <action selector="timeinYears:" destination="9pv-A4-QxB" eventType="valueChanged" id="ntd-R0-q3O"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-et-N7V">
+                                        <rect key="frame" x="0.0" y="394.5" width="343" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="compounding frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZi-HK-96c">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5eg-JP-vbV">
+                                                <rect key="frame" x="0.0" y="24" width="343" height="29"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <segments>
+                                                    <segment title="Monthly"/>
+                                                    <segment title="Half Yearly"/>
+                                                    <segment title="Yearly"/>
+                                                </segments>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="compoundingFrequency:" destination="8rJ-Kc-sve" eventType="valueChanged" id="MbS-wF-lAt"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ml6-rt-DeI">
+                                        <rect key="frame" x="0.0" y="466.5" width="343" height="91.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Zdq-Ds-JLn">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="91.5"/>
+                                                <string key="text">"Percentages are one of the most useful math you can learn. Do you know how to compute a percentage?" I asked Mihir out of the blue
+
+"Well" he said and started fidgeting with his calculator</string>
+                                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="0.4864619006849315" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FMw-AG-rHc" secondAttribute="trailing" id="1ee-GK-bKD"/>
+                            <constraint firstItem="FMw-AG-rHc" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="86s-LL-gPs"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="FMw-AG-rHc" secondAttribute="bottom" constant="20" id="oej-5I-JwO"/>
+                            <constraint firstItem="FMw-AG-rHc" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="20" id="yp6-Kc-aHs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="current moni" image="current" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="DisplayComputedValue" destination="Vqw-lE-n6s" id="oxl-XW-oy9"/>
+                        <outlet property="DisplayLblCaption" destination="5Xk-An-5H5" id="neU-my-3Km"/>
+                        <outlet property="DisplayResults" destination="Zdq-Ds-JLn" id="Kmf-iS-eh3"/>
+                        <outlet property="currentInvestmentLbl" destination="BL9-ON-ndd" id="Ilm-ij-eqB"/>
+                        <outlet property="interestRateLbl" destination="yQ2-U1-ZM6" id="mbj-hm-I1R"/>
+                        <outlet property="slideMoney" destination="Txm-8B-z5i" id="9Z5-Rk-fcs"/>
+                        <outlet property="timeinYearsLbl" destination="Sot-CJ-9Kl" id="wYq-2s-CmJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2756" y="1038.5307346326838"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="WHO-t1-KdN">
+            <objects>
+                <viewController id="y0L-N0-jfV" customClass="FourthViewController" customModule="park_calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUc-tV-J8R"/>
+                        <viewControllerLayoutGuide type="bottom" id="0pG-nG-Xnt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ekG-QJ-ixb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwR-Ri-mCl">
+                                <rect key="frame" x="8" y="28" width="359" height="582"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMD-b4-kNx" userLabel="ContentView">
+                                        <rect key="frame" x="8" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boj-Uc-8uf">
+                                                <rect key="frame" x="8" y="8" width="359" height="31"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.99852846750000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="lKY-6Z-1Va"/>
+                                                    <constraint firstAttribute="height" constant="31" id="uGO-NP-coq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMf-rz-vov">
+                                                <rect key="frame" x="8" y="47" width="359" height="176"/>
+                                                <string key="text">Percentages are one of the most useful math you can learn. Do you know how to compute a percentage? I asked Mihir out of the blu Well he said and started fidgeting with his calculatorhey Mihir, you see approx. 20% of adults do not know how to calculate percentages once they leave school. But at the same time we encounter percentages on a daily basis. For example - tips in a restaurant, interest rates, shopping</string>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.99852846750000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Boj-Uc-8uf" firstAttribute="leading" secondItem="IMD-b4-kNx" secondAttribute="leading" constant="8" id="2KA-JE-Tng"/>
+                                            <constraint firstItem="Boj-Uc-8uf" firstAttribute="top" secondItem="IMD-b4-kNx" secondAttribute="top" constant="8" id="84T-XH-9OT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Boj-Uc-8uf" secondAttribute="trailing" constant="8" id="EAP-tE-ymw"/>
+                                            <constraint firstItem="nMf-rz-vov" firstAttribute="leading" secondItem="IMD-b4-kNx" secondAttribute="leading" constant="8" id="Xn2-zu-irq"/>
+                                            <constraint firstItem="nMf-rz-vov" firstAttribute="top" secondItem="Boj-Uc-8uf" secondAttribute="bottom" constant="8" id="hOP-Si-5FM"/>
+                                            <constraint firstItem="nMf-rz-vov" firstAttribute="top" secondItem="Boj-Uc-8uf" secondAttribute="bottom" constant="8" id="mvK-te-EWY"/>
+                                            <constraint firstAttribute="trailing" secondItem="nMf-rz-vov" secondAttribute="trailing" constant="8" id="pCn-RN-N7V"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IMD-b4-kNx" firstAttribute="top" secondItem="jwR-Ri-mCl" secondAttribute="top" id="5GI-pi-xd2"/>
+                                    <constraint firstAttribute="bottom" secondItem="IMD-b4-kNx" secondAttribute="bottom" id="PFY-UX-tr6"/>
+                                    <constraint firstItem="IMD-b4-kNx" firstAttribute="leading" secondItem="jwR-Ri-mCl" secondAttribute="leading" constant="8" id="lLx-vc-kfn"/>
+                                    <constraint firstAttribute="trailing" secondItem="IMD-b4-kNx" secondAttribute="trailing" constant="8" id="woX-pY-ANw"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IMD-b4-kNx" firstAttribute="height" secondItem="ekG-QJ-ixb" secondAttribute="height" priority="250" id="0Qb-0I-cUG"/>
+                            <constraint firstItem="0pG-nG-Xnt" firstAttribute="top" secondItem="jwR-Ri-mCl" secondAttribute="bottom" constant="8" symbolic="YES" id="1QB-eP-ReL"/>
+                            <constraint firstItem="jwR-Ri-mCl" firstAttribute="top" secondItem="sUc-tV-J8R" secondAttribute="bottom" constant="8" symbolic="YES" id="3HL-QL-XIz"/>
+                            <constraint firstItem="jwR-Ri-mCl" firstAttribute="leading" secondItem="ekG-QJ-ixb" secondAttribute="leading" constant="8" id="ePh-qJ-4EA"/>
+                            <constraint firstItem="IMD-b4-kNx" firstAttribute="width" secondItem="ekG-QJ-ixb" secondAttribute="width" id="hWT-lp-FXr"/>
+                            <constraint firstAttribute="trailing" secondItem="jwR-Ri-mCl" secondAttribute="trailing" constant="8" id="vId-6t-q8E"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Help" image="about" id="5g3-ea-nNT"/>
+                    <connections>
+                        <outlet property="DisplayHelpLabel" destination="nMf-rz-vov" id="b1M-NJ-nBQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTe-Ix-0yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9276" y="-148.87556221889056"/>
+        </scene>
+        <!--Investment Calculator-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController title="Investment Calculator" id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" itemPositioning="centered" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="y0L-N0-jfV" kind="relationship" relationship="viewControllers" id="NV1-NT-5jj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5583" y="681"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="about" width="15" height="15"/>
+        <image name="current" width="16" height="16"/>
+        <image name="future" width="16" height="16"/>
+    </resources>
+</document>
