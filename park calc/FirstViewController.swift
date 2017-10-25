@@ -32,8 +32,8 @@ class FirstViewController: UIViewController {
             slideMoney.value = 50000
         } else {
             
-            slideMoney.maximumValue = 10000
-            slideMoney.minimumValue = 500
+            slideMoney.maximumValue = 5000
+            slideMoney.minimumValue = 50
             slideMoney.value = 250
         }
         
